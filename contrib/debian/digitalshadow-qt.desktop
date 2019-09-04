@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=DigitalShadow Core
+Comment=DigitalShadow P2P Cryptocurrency
+Comment[fr]=DigitalShadow, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=DigitalShadow, eşten eşe kriptografik sanal para birimi
+Exec=digitalshadow-qt %u
+Terminal=false
+Type=Application
+Icon=digitalshadow128
+MimeType=x-scheme-handler/digitalshadow;
+Categories=Office;Finance;
+StartupWMClass=DigitalShadow-qt

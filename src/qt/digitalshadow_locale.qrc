@@ -1,0 +1,37 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/digitalshadow_bg.qm</file>
+        <file alias="ca">locale/digitalshadow_ca.qm</file>
+        <file alias="cs">locale/digitalshadow_cs.qm</file>
+        <file alias="da">locale/digitalshadow_da.qm</file>
+        <file alias="de">locale/digitalshadow_de.qm</file>
+        <file alias="en">locale/digitalshadow_en.qm</file>
+        <file alias="en_GB">locale/digitalshadow_en_GB.qm</file>
+        <file alias="en_US">locale/digitalshadow_en_US.qm</file>
+        <file alias="eo">locale/digitalshadow_eo.qm</file>
+        <file alias="es">locale/digitalshadow_es.qm</file>
+        <file alias="es_ES">locale/digitalshadow_es_ES.qm</file>
+        <file alias="fi">locale/digitalshadow_fi.qm</file>
+        <file alias="fr_FR">locale/digitalshadow_fr_FR.qm</file>
+        <file alias="hi_IN">locale/digitalshadow_hi_IN.qm</file>
+        <file alias="hr">locale/digitalshadow_hr.qm</file>
+        <file alias="hr_HR">locale/digitalshadow_hr_HR.qm</file>
+        <file alias="it">locale/digitalshadow_it.qm</file>
+        <file alias="ja">locale/digitalshadow_ja.qm</file>
+        <file alias="ko_KR">locale/digitalshadow_ko_KR.qm</file>
+        <file alias="lt_LT">locale/digitalshadow_lt_LT.qm</file>
+        <file alias="nl">locale/digitalshadow_nl.qm</file>
+        <file alias="pl">locale/digitalshadow_pl.qm</file>
+        <file alias="pt">locale/digitalshadow_pt.qm</file>
+        <file alias="pt_BR">locale/digitalshadow_pt_BR.qm</file>
+        <file alias="ro_RO">locale/digitalshadow_ro_RO.qm</file>
+        <file alias="ru">locale/digitalshadow_ru.qm</file>
+        <file alias="sk">locale/digitalshadow_sk.qm</file>
+        <file alias="sv">locale/digitalshadow_sv.qm</file>
+        <file alias="tr">locale/digitalshadow_tr.qm</file>
+        <file alias="uk">locale/digitalshadow_uk.qm</file>
+        <file alias="vi">locale/digitalshadow_vi.qm</file>
+        <file alias="zh_CN">locale/digitalshadow_zh_CN.qm</file>
+        <file alias="zh_TW">locale/digitalshadow_zh_TW.qm</file>
+    </qresource>
+</RCC>

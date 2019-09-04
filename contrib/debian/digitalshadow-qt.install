@@ -1,0 +1,6 @@
+usr/local/bin/digitalshadow-qt usr/bin
+share/pixmaps/digitalshadow32.xpm usr/share/pixmaps
+share/pixmaps/digitalshadow16.xpm usr/share/pixmaps
+share/pixmaps/digitalshadow128.png usr/share/pixmaps
+debian/digitalshadow-qt.desktop usr/share/applications
+debian/digitalshadow-qt.protocol usr/share/kde4/services/

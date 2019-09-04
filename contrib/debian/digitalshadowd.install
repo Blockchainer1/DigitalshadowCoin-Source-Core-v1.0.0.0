@@ -1,0 +1,3 @@
+usr/local/bin/digitalshadowd usr/bin
+usr/local/bin/digitalshadow-cli usr/bin
+debian/examples/digitalshadow.conf etc/digitalshadow
