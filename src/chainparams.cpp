@@ -142,7 +142,7 @@ public:
         nBlockZerocoinV2 = 999999999;
         nBlockDoubleAccumulated = 999999999;
         nEnforceNewSporkKey = 1567390815;
-        nRejectOldSporkKey = 1527811200; 
+        nRejectOldSporkKey = 1527811200;
 
         // Public coin spend enforcement
         nPublicZCSpends = 1;
@@ -161,7 +161,7 @@ public:
          *     CTxOut(nValue=50.00000000, scriptPubKey=0xA9037BAC7050C479B121CF)
          *   vMerkleTree: e0028e
          */
-        const char* pszTimestamp = "DigitalShadow Cryptocurrency 2019";
+        const char* pszTimestamp = Cannabitz Cryptocurrency 2019";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -172,22 +172,52 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1567390815;
+        genesis.nTime = 1571460309;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 21128796;
+        genesis.nNonce = 111;
 
         hashGenesisBlock = genesis.GetHash();
+
+                                   printf("Searching for genesis block...\n");
+                            uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
+                            uint256 thash;
+
+                            while (true)
+                            {
+                               thash = genesis.GetHash();
+                               if (thash <= hashTarget)
+                                   break;
+                               if ((genesis.nNonce & 0xFFF) == 0)
+                               {
+                                   printf("nonce %08X: hash = %s (target = %s)\n", genesis.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
+                               }
+                               ++genesis.nNonce;
+                               if (genesis.nNonce == 0)
+                               {
+                                   printf("NONCE WRAPPED, incrementing time\n");
+                                   ++genesis.nTime;
+                               }
+                           }
+                           printf("genesis.nTime = %u \n", genesis.nTime);
+                           printf("genesis.nNonce = %u \n", genesis.nNonce);
+                           printf("genesis.nVersion = %u \n", genesis.nVersion);
+                           printf("genesis.nBits = %u \n", genesis.nBits);
+                           printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+                           printf("genesis.hashMerkleRoot = %s \n", genesis.hashMerkleRoot.ToString().c_str());
+
+
+
         assert(hashGenesisBlock == uint256("0x00000d28fc1dbb3fe0e93df58cb17b37d909f69bb8f6eb9d6e8d633fa41dd924"));
         assert(genesis.hashMerkleRoot == uint256("0xb36cf6c7c79a7d1a054a9cbec20291173372f1de348c595800b14648c52226e8"));
 
-        vSeeds.push_back(CDNSSeedData("149.28.38.206", "149.28.38.206"));
-        vSeeds.push_back(CDNSSeedData("104.156.224.124", "104.156.224.124"));
-		vSeeds.push_back(CDNSSeedData("45.32.223.141", "45.32.223.141"));
-		vSeeds.push_back(CDNSSeedData("176.58.108.9", "176.58.108.9"));
+//        vSeeds.push_back(CDNSSeedData("149.28.38.206", "149.28.38.206"));
+//        vSeeds.push_back(CDNSSeedData("104.156.224.124", "104.156.224.124"));
+//		vSeeds.push_back(CDNSSeedData("45.32.223.141", "45.32.223.141"));
+//		vSeeds.push_back(CDNSSeedData("176.58.108.9", "176.58.108.9"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 30);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 31);
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 158);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 28);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 17);
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 156);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x02)(0x2D)(0x25)(0x33).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x02)(0x21)(0x31)(0x2B).convert_to_container<std::vector<unsigned char> >();
         // 	BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
@@ -227,7 +257,7 @@ public:
         nZerocoinHeaderVersion = 4; //Block headers must be this version once zerocoin is active
         nZerocoinRequiredStakeDepth = 200; //The required confirmations for a zdsha to be stakable
 
-        nBudget_Fee_Confirmations = 6; // Number of confirmations for the finalization fee
+        nBudget_Fee_Confirmations = 8; // Number of confirmations for the finalization fee
         nProposalEstablishmentTime = 60 * 60 * 24; // Proposals must be at least a day old to make it into a budget
     }
 
@@ -275,7 +305,7 @@ public:
         nInvalidAmountFiltered = 0; //Amount of invalid coins filtered through exchanges, that should be considered valid
         nBlockZerocoinV2 = 999999999; //!> The block that zerocoin v2 becomes active
         nEnforceNewSporkKey = 1567390815;
-        nRejectOldSporkKey = 1522454400; 
+        nRejectOldSporkKey = 1522454400;
 
         // Public coin spend enforcement
         nPublicZCSpends = 1;
@@ -294,12 +324,12 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 65); 
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 66);  
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 193);     
-        
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 65);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 66);
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 193);
+
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x3a)(0x80)(0x61)(0xa0).convert_to_container<std::vector<unsigned char> >();
-        
+
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x3a)(0x80)(0x58)(0x37).convert_to_container<std::vector<unsigned char> >();
         // Testnet digitalshadow BIP44 coin type is '1' (All coin's testnet default)
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
